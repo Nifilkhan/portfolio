@@ -46,7 +46,8 @@ p.para{
 font-style: normal;
 font-weight: 400;
 font-size: 1.5rem;
-line-height: 1.8rem;
+line-height: 2.1rem;
+letter-spacing: 0.15rem;
 margin: 0 auto 2rem ;
 color: #0D0F16;
 }
@@ -141,7 +142,6 @@ a.my-cv {
   border: .1rem solid #F87474;
   border-radius: .5rem;
   background-color: #FEF4F2 !important;
-  /* transition: background .5s, border 0.5s, color 0.5s ease-in-out; Add a 0s transition for the specified properties */
 }
 
 a.my-cv:hover {
@@ -199,13 +199,24 @@ color: #0D0F16;
   color: #F26C4F;
 }
 .first-section img{
-  max-width: 30rem;
-
+  max-width: 25.5rem;
+  transition: transform 0.5s ease;
 }
 .img{
   display: flex;
   justify-content: center;
- 
+}
+.img .img-des:hover img {
+  transform: scale(1.1);
+
+}
+
+.img-des {
+  background: linear-gradient(#a52a2a29,#212121);
+  backdrop-filter: blur(5px) !important;
+  width: 42%;
+  border-radius: 45px;
+  cursor: pointer;
 }
 /* home page button */
 
@@ -216,13 +227,11 @@ color: #0D0F16;
   font-weight: 500;
   font-size: 1.4rem;
   color: white;
-  /* background: #F26C4F; */
+  background: #F26C4F;
   background: linear-gradient(90deg, #F26C4F 0%, #F26C4F 81%);
   border-radius: .2rem;
   padding: .6rem 2rem;
   cursor: pointer;
-  /* transition: background 1s, border 0.5s, color 0.5s ease-in-out; */
-   /* Add a 0s transition for the specified properties */
 }
 
 .homeBtn:hover {
@@ -269,12 +278,12 @@ color: #0D0F16;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .item1 { grid-area: one;
-   background-image: url(../img/project05.png);
+   background-image: url(../img/project1Html.png);
    
 }
 .item2 {
   grid-area: two;
-  background-image: url(../img/project02.png);
+  background-image: url(../img/project2Bootstrap.png);
 }
 .item3 { grid-area: three; background-image: url(../img/project03.png); }
 .item4 { grid-area: four; background-image: url(../img/project04.png); }
@@ -305,17 +314,11 @@ border-radius: 10px;
   top:0;
   left:0;
   border-radius: 10px;
-  /* transition: background 0.5s, color .5s, font-weight .5s ease-in-out ; Add a 0s transition for the specified properties */
-
   display:flex;
   justify-content: center;
   align-items: center;
   gap:15px;
 }
-/* .project-grid .layer:hover{
-  /* background: linear-gradient(90deg, rgba(245, 245, 245, 0.5) 0%, rgb(238, 236, 236,0.5) 81%) !important;  */
-
-/* } */
 
 .layer a{
   border-radius: 10px;
@@ -360,8 +363,8 @@ border-radius: 10px;
 }
 
 .service-section:hover{
-  transform:scale(1.2);
-  transition:transform 1s ease-in;
+  transform:scale(1.1);
+  transition:transform 0.5s ease-in;
 }
 
 /*  skills section  */
@@ -439,53 +442,6 @@ border-radius: 10px;
   }
  
 }
-/*
-.items{
- margin: 2rem auto;;
-}
-
-.items img{
-  width: 3.5rem;
-}
-.items p{
-  font-weight: 500;
-}
-.skills{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
- 
-}
-
-.skill{
-  width: 220px;
-  
-}
-
-.border1{
-  border-color:rgba(242, 108, 79, 0.5);
-  border-width: 0px 0px 1px 0px;
-  border-style: solid;
-}
-
-.border_bottom{
-  border-color:rgba(242, 108, 79, 0.5);
-  border-width: 0px 0px 1px 0px;
-  border-style: solid; 
-}
-.border_right, .border3{
- border-right: 1px solid rgba(242, 108, 79, 0.5); 
-}
-.border3, .border7{
-  border-left: 1px solid rgba(242, 108, 79, 0.5); 
-}
-.border10{
- border-right: 1px solid rgba(242, 108, 79, 0.5); 
-}
-
-*/
 
 /* ----------cta-------- */
 .pos-relative{
@@ -564,7 +520,6 @@ border-radius: 10px;
 
 .contact-section .row{
   display: flex;
-  /* flex-direction:unset; */
 }
 
 /* form design */
@@ -735,7 +690,6 @@ a{
 .back-to-top::after {
     content: "";
     display: block;
-    /* vertical-align: middle; */
     border-bottom: solid 10px #EA5D5F;
     border-left: solid 10px transparent;
     line-height: 0;
@@ -888,9 +842,7 @@ a{
   .navbar-brand{
       font-size: 3.2rem;
   }
-  /* a.navbar-brand:hover{
-      color:  #F87474 !important;
-  } */
+
   .navbar-collapse{
       padding-bottom: 2rem;
       
@@ -983,4 +935,5 @@ a{
       border-left: none; 
   }
 }
+
 
